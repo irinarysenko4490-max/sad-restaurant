@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>САД — ресторан в Махачкале | Цветущий сад в сердце города</title>
+<meta name="description" content="Ресторан «Сад» на ул. Магомеда Ярагского, 45а в Махачкале. Завтраки с 9:00, хоспер и мангал, кавказская, европейская и азиатская кухня, летняя веранда, банкеты до 200 гостей. Бронь: +7 988 292 01 10.">
+<meta name="theme-color" content="#1e5631">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="САД — ресторан в Махачкале">
+<meta property="og:description" content="Цветущий сад в сердце города. Завтраки, хоспер, банкеты. Ярагского, 45а.">
+<meta property="og:image" content="sad-images/spinach-oladi.jpg">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --primary: #1e5631;
+    --primary-deep: #123d22;
+    --primary-soft: #2f7a45;
+    --accent: #5e340e;
+    --accent-2: #a0622f;
+    --gold: #c9a227;
+    --accent-light: #d9cbb4;
+    --light-bg: #f7f4ef;
+    --warm: #efe6d8;
+    --text-dark: #22261f;
+    --text-light: #6d7268;
+    --border: #e2dbd0;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 10px rgba(30, 86, 49, .07);
+    --shadow-md: 0 14px 34px rgba(30, 86, 49, .12);
+    --shadow-lg: 0 26px 60px rgba(18, 61, 34, .20);
+    --radius: 16px;
+    --nav-h: 74px;
+    --display: 'Manrope', 'Segoe UI', Roboto, Arial, sans-serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--body);
+    line-height: 1.65;
+    color: var(--text-dark);
+    background: var(--light-bg);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+::selection { background: var(--primary-soft); color: #fff; }
+
+/* ---------- Navigation ---------- */
+nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    z-index: 200;
+    border-bottom: 1px solid rgba(30, 86, 49, .12);
+    transition: box-shadow .3s, background .3s;
+}
+nav.scrolled { box-shadow: 0 6px 24px rgba(30, 86, 49, .10); }
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    height: var(--nav-h);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--display);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 6px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.logo .leaf-mark { font-size: 22px; letter-spacing: 0; }
+.logo small {
+    display: block;
+    font-family: var(--body);
+    font-size: 9px;
+    letter-spacing: 2.4px;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-burger {
+    display: none;
+    width: 44px; height: 44px;
+    border: 1px solid rgba(30, 86, 49, .2);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+.nav-burger i {
+    position: absolute;
+    left: 12px; right: 12px; height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: transform .3s, opacity .2s;
+}
+.nav-burger i:nth-child(1) { top: 15px; }
+.nav-burger i:nth-child(2) { top: 21px; }
+.nav-burger i:nth-child(3) { top: 27px; }
+.nav-burger.open i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-burger.open i:nth-child(2) { opacity: 0; }
+.nav-burger.open i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.nav-links a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 14.5px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: background .25s, color .25s;
+    cursor: pointer;
+}
+.nav-links a:hover { background: rgba(30, 86, 49, .08); color: var(--primary); }
+.nav-links a.active { background: var(--primary); color: #fff; }
+.nav-links-phone { display: none; }
+.nav-links-phone a { background: rgba(30, 86, 49, .08); color: var(--primary); font-weight: 600; text-align: center; }
+
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 11px 20px;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: transform .25s, box-shadow .25s, background .25s;
+    flex-shrink: 0;
+}
+.nav-cta:hover { background: var(--primary-deep); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* ---------- Hero + листопад ---------- */
+.hero {
+    position: relative;
+    min-height: calc(100vh - var(--nav-h));
+    margin-top: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px 90px;
+    overflow: hidden;
+    color: #fff;
+    isolation: isolate;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('sad-images/nuts-jam.jpg') center 22%/cover no-repeat;
+    transform: scale(1.1);
+    filter: saturate(.85) blur(1px);
+    z-index: -3;
+}
+.hero-tint {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(ellipse at 22% 18%, rgba(47, 122, 69, .45) 0%, transparent 58%),
+        radial-gradient(ellipse at 84% 78%, rgba(94, 52, 14, .42) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(18, 61, 34, .93) 0%, rgba(30, 86, 49, .84) 42%, rgba(44, 61, 28, .86) 78%, rgba(61, 42, 16, .9) 100%);
+}
+.hero-vignette {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse at center, transparent 35%, rgba(10, 30, 16, .55) 100%);
+    pointer-events: none;
+}
+
+#leafCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-branch {
+    position: absolute;
+    top: -14px;
+    width: 340px;
+    max-width: 46vw;
+    opacity: .5;
+    z-index: 1;
+    pointer-events: none;
+    color: #9fc25a;
+}
+.hero-branch.left { left: -30px; transform-origin: top left; animation: sway 9s ease-in-out infinite; }
+.hero-branch.right { right: -30px; transform: scaleX(-1); transform-origin: top center; animation: sway 11s ease-in-out infinite; }
+@keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(2.4deg); }
+}
+.hero-branch.right { animation-name: swayRight; }
+@keyframes swayRight {
+    0%, 100% { transform: scaleX(-1) rotate(0deg); }
+    50% { transform: scaleX(-1) rotate(2.4deg); }
+}
+
+.hero-inner { position: relative; z-index: 2; max-width: 860px; }
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 3.4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, .34);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(6px);
+    margin-bottom: 26px;
+    animation: rise .9s .05s both cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero h1 {
+    font-family: var(--display);
+    font-size: clamp(52px, 14vw, 120px);
+    font-weight: 800;
+    letter-spacing: clamp(8px, 4vw, 26px);
+    line-height: .96;
+    margin-bottom: 14px;
+    text-indent: clamp(8px, 4vw, 26px);
+    text-shadow: 0 10px 44px rgba(0, 0, 0, .35);
+    animation: rise 1s .12s both cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero-sub {
+    font-family: var(--display);
+    font-size: clamp(18px, 3.2vw, 25px);
+    font-weight: 600;
+    letter-spacing: -.01em;
+    opacity: .95;
+    margin-bottom: 14px;
+    animation: rise 1s .22s both cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero-lead {
+    font-size: clamp(15px, 2vw, 17px);
+    opacity: .88;
+    max-width: 620px;
+    margin: 0 auto 34px;
+    animation: rise 1s .3s both cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    animation: rise 1s .38s both cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero-facts {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: rise 1s .46s both cubic-bezier(.2, .7, .3, 1);
+}
+.hero-fact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(6px);
+}
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(26px); }
+    to { opacity: 1; transform: none; }
+}
+
+.scroll-hint {
+    display: none;
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 11px;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    opacity: .75;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+@media (min-width: 900px) and (min-height: 800px) {
+    .scroll-hint { display: flex; }
+}
+.scroll-hint span.line {
+    display: block;
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .8), transparent);
+    animation: drop 2s ease-in-out infinite;
+}
+@keyframes drop {
+    0% { transform: scaleY(.2); transform-origin: top; opacity: 0; }
+    40% { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 15px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 15.5px;
+    cursor: pointer;
+    border: none;
+    transition: transform .25s, box-shadow .25s, background .25s, color .25s;
+}
+.btn-primary { background: linear-gradient(135deg, #5e340e 0%, #a0622f 100%); color: #fff; box-shadow: 0 10px 26px rgba(94, 52, 14, .35); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 38px rgba(94, 52, 14, .42); }
+.btn-ghost { background: rgba(255, 255, 255, .1); color: #fff; border: 1px solid rgba(255, 255, 255, .45); backdrop-filter: blur(6px); }
+.btn-ghost:hover { background: #fff; color: var(--primary); transform: translateY(-3px); }
+.btn-green { background: var(--primary); color: #fff; box-shadow: 0 10px 26px rgba(30, 86, 49, .28); }
+.btn-green:hover { background: var(--primary-deep); transform: translateY(-3px); }
+.btn-outline { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
+.btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+
+/* ---------- Layout ---------- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 84px 0; }
+.section.tight { padding: 60px 0; }
+.section.white { background: var(--white); }
+.section.light { background: var(--light-bg); }
+.section.warm { background: var(--warm); }
+
+.section-head { text-align: center; max-width: 680px; margin: 0 auto 52px; }
+.eyebrow {
+    display: inline-block;
+    font-size: 11.5px;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent-2);
+    margin-bottom: 14px;
+}
+.section-title {
+    font-family: var(--display);
+    font-size: clamp(28px, 4.6vw, 40px);
+    font-weight: 800;
+    letter-spacing: -.022em;
+    color: var(--primary);
+    line-height: 1.18;
+    margin-bottom: 16px;
+}
+
+/* Деловая подача заголовков: плотнее трекинг, жирнее начертание */
+.feature h3, .dish-body h3, .menu-card h3, .about-text h3,
+.contact-card h3, .booking-container h3, .lunch-banner h3,
+.footer-grid h4, .stat b {
+    font-weight: 700;
+    letter-spacing: -.018em;
+}
+.section-head p { color: var(--text-light); font-size: 16.5px; }
+.divider {
+    width: 66px; height: 3px; margin: 0 auto 20px;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+    border-radius: 2px;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Feature cards ---------- */
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 22px; }
+.feature {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 26px;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.feature:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: rgba(30, 86, 49, .3); }
+.feature .ico {
+    width: 52px; height: 52px; border-radius: 14px;
+    display: grid; place-items: center;
+    font-size: 24px; margin-bottom: 16px;
+    background: linear-gradient(135deg, rgba(30, 86, 49, .12), rgba(201, 162, 39, .18));
+}
+.feature h3 { font-family: var(--display); font-size: 20px; color: var(--primary); margin-bottom: 8px; }
+.feature p { font-size: 14.5px; color: var(--text-light); }
+
+/* ---------- Stats ---------- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 18px; }
+.stat {
+    text-align: center;
+    padding: 26px 16px;
+    background: rgba(255, 255, 255, .6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+.stat b { display: block; font-family: var(--display); font-size: 34px; color: var(--primary); line-height: 1.1; }
+.stat span { font-size: 13.5px; color: var(--text-light); }
+
+/* ---------- Заглушка, если файл фото не найден ---------- */
+img.img-missing { display: none; }
+.img-holder--missing {
+    position: relative;
+    background: linear-gradient(135deg, var(--warm) 0%, #e4dbcb 100%);
+}
+.img-holder--missing::after {
+    content: '🌿';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    opacity: .4;
+}
+
+/* ---------- Signature dishes ---------- */
+.dish-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); gap: 26px; }
+.dish {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    transition: transform .35s, box-shadow .35s;
+}
+.dish:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.dish-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--warm); }
+.dish-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.3,1); }
+.dish:hover .dish-photo img { transform: scale(1.07); }
+.dish-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(18, 61, 34, .86);
+    color: #fff; font-size: 11px; font-weight: 700;
+    letter-spacing: 1.4px; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 999px;
+    backdrop-filter: blur(4px);
+}
+.dish-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+.dish-body h3 { font-family: var(--display); font-size: 21px; color: var(--text-dark); margin-bottom: 8px; }
+.dish-body p { font-size: 14.5px; color: var(--text-light); flex: 1; }
+.dish-price { margin-top: 14px; font-weight: 700; color: var(--accent); font-size: 17px; }
+
+/* ---------- Menu ---------- */
+.menu-note {
+    display: flex; gap: 12px; align-items: flex-start;
+    max-width: 780px; margin: 0 auto 44px;
+    background: rgba(201, 162, 39, .10);
+    border: 1px solid rgba(201, 162, 39, .34);
+    border-radius: 14px; padding: 16px 20px;
+    font-size: 14.5px; color: #6a5a27;
+}
+.menu-note strong { color: #4d4118; }
+
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr)); gap: 24px; }
+.menu-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.menu-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(30, 86, 49, .28); }
+.menu-card-photo { aspect-ratio: 16 / 10; overflow: hidden; background: var(--warm); }
+.menu-card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.3,1); }
+.menu-card:hover .menu-card-photo img { transform: scale(1.06); }
+.menu-card-inner { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.menu-card h3 {
+    font-family: var(--display); font-size: 22px; color: var(--primary);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 4px;
+}
+.menu-card .cat-sub { font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+.menu-list { list-style: none; display: flex; flex-direction: column; gap: 11px; flex: 1; }
+.menu-list li { display: flex; align-items: baseline; gap: 8px; font-size: 15px; }
+.menu-list .nm { font-weight: 500; }
+.menu-list .dsh { flex: 1; border-bottom: 1px dotted var(--border); transform: translateY(-4px); min-width: 14px; }
+.menu-list .pr { font-weight: 700; color: var(--accent); white-space: nowrap; font-size: 14.5px; }
+.menu-list .desc { display: block; font-size: 13px; color: var(--text-light); font-weight: 400; margin-top: 2px; }
+
+.lunch-banner {
+    margin-top: 40px;
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary) 55%, #3d2a10);
+    color: #fff; border-radius: var(--radius);
+    padding: 34px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    box-shadow: var(--shadow-lg);
+}
+.lunch-banner h3 { font-family: var(--display); font-size: 26px; margin-bottom: 6px; }
+.lunch-banner p { opacity: .9; font-size: 15px; }
+
+/* ---------- Gallery ---------- */
+/* Колонки заданы явно, чтобы 7 фото (одно на две ячейки)
+   всегда заполняли сетку без пустых мест на любой ширине */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+@media (min-width: 640px)  { .gallery { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 980px)  { .gallery { grid-template-columns: repeat(4, 1fr); } }
+.gallery figure {
+    position: relative; margin: 0;
+    aspect-ratio: 1; overflow: hidden;
+    border-radius: 14px; cursor: zoom-in;
+    background: var(--warm);
+}
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.3,1); }
+.gallery figure:hover img { transform: scale(1.09); }
+.gallery figcaption {
+    position: absolute; inset: auto 0 0 0;
+    padding: 26px 14px 12px;
+    background: linear-gradient(to top, rgba(10, 30, 16, .85), transparent);
+    color: #fff; font-size: 13px; font-weight: 500;
+    opacity: 0; transform: translateY(8px); transition: .3s;
+}
+.gallery figure:hover figcaption { opacity: 1; transform: none; }
+/* Широкий кадр занимает всю строку, кроме самой крупной сетки,
+   где он берёт ровно половину — так ряды всегда полные */
+.gallery figure.wide { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
+@media (min-width: 980px) { .gallery figure.wide { grid-column: span 2; } }
+
+/* Lightbox */
+.lightbox {
+    position: fixed; inset: 0; z-index: 500;
+    background: rgba(8, 20, 12, .93);
+    display: none; align-items: center; justify-content: center;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+}
+.lightbox.open { display: flex; animation: fadein .25s; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+.lightbox img { max-width: min(92vw, 900px); max-height: 86vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.lightbox .lb-cap { position: absolute; bottom: 26px; left: 0; right: 0; text-align: center; color: #fff; font-size: 14px; padding: 0 20px; }
+.lightbox .lb-close, .lightbox .lb-nav {
+    position: absolute; background: rgba(255,255,255,.14); color: #fff;
+    border: 1px solid rgba(255,255,255,.28); border-radius: 50%;
+    width: 46px; height: 46px; display: grid; place-items: center;
+    font-size: 22px; cursor: pointer; transition: background .2s;
+}
+.lightbox .lb-close:hover, .lightbox .lb-nav:hover { background: rgba(255,255,255,.3); }
+.lightbox .lb-close { top: 22px; right: 22px; }
+.lightbox .lb-nav.prev { left: 18px; top: 50%; transform: translateY(-50%); }
+.lightbox .lb-nav.next { right: 18px; top: 50%; transform: translateY(-50%); }
+
+/* ---------- About ---------- */
+.about-content { display: grid; grid-template-columns: 1.05fr 1fr; gap: 54px; align-items: center; }
+.about-text h3 { font-family: var(--display); font-size: clamp(25px, 3.6vw, 34px); color: var(--primary); margin-bottom: 18px; line-height: 1.2; }
+.about-text p { font-size: 16px; line-height: 1.85; margin-bottom: 18px; color: var(--text-light); }
+.about-text p strong { color: var(--text-dark); }
+
+.about-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.about-photos figure { margin: 0; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; box-shadow: var(--shadow-md); }
+.about-photos figure:first-child { grid-row: span 2; aspect-ratio: 3/5.1; }
+.about-photos img { width: 100%; height: 100%; object-fit: cover; }
+
+.kitchen-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 26px; }
+.chip {
+    font-size: 13.5px; font-weight: 500;
+    padding: 8px 16px; border-radius: 999px;
+    background: rgba(30, 86, 49, .09);
+    color: var(--primary);
+    border: 1px solid rgba(30, 86, 49, .16);
+}
+
+.fact-list { list-style: none; display: grid; gap: 12px; margin-top: 8px; }
+.fact-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; }
+.fact-list .fi { flex-shrink: 0; width: 26px; text-align: center; }
+
+/* ---------- Contacts ---------- */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 22px; margin-bottom: 46px; }
+.contact-card {
+    background: var(--white); padding: 32px 26px;
+    border-radius: var(--radius); border: 1px solid var(--border);
+    text-align: center; transition: transform .3s, box-shadow .3s;
+}
+.contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.contact-card .icon {
+    font-size: 28px; width: 66px; height: 66px;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--primary) 0%, #2c3d1c 100%);
+    border-radius: 50%; margin: 0 auto 16px;
+}
+.contact-card:nth-child(2) .icon { background: linear-gradient(135deg, #5e340e 0%, #a0622f 100%); }
+.contact-card:nth-child(3) .icon { background: linear-gradient(135deg, #8b6f47 0%, var(--gold) 100%); }
+.contact-card h3 { color: var(--primary); margin-bottom: 8px; font-size: 18px; font-family: var(--display); }
+.contact-card p { color: var(--text-light); font-size: 14.5px; }
+.contact-info { font-size: 17px; font-weight: 700; color: var(--text-dark); margin-top: 8px; }
+.contact-info a { color: inherit; text-decoration: none; }
+.contact-info a:hover { color: var(--accent-2); }
+
+.map-wrap {
+    border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+    margin-bottom: 46px; background: var(--warm);
+    aspect-ratio: 21 / 9; min-height: 280px;
+}
+.map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.booking-container {
+    max-width: 680px; margin: 0 auto;
+    background: var(--white); padding: 40px;
+    border-radius: var(--radius); border: 1px solid var(--border);
+    box-shadow: var(--shadow-md); position: relative; overflow: hidden;
+}
+.booking-container::before {
+    content: ''; position: absolute; inset: 0 0 auto 0; height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--gold), var(--accent));
+}
+.booking-container h3 { font-family: var(--display); font-size: 24px; color: var(--primary); margin-bottom: 6px; }
+.booking-container .form-lead { font-size: 14.5px; color: var(--text-light); margin-bottom: 26px; }
+
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; margin-bottom: 7px; font-weight: 600; font-size: 13.5px; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 13px 14px;
+    border: 1px solid var(--border); border-radius: 10px;
+    font-family: inherit; font-size: 15px; background: #fcfbf9;
+    transition: border-color .25s, box-shadow .25s, background .25s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--primary-soft); background: #fff;
+    box-shadow: 0 0 0 3px rgba(47, 122, 69, .14);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-actions { display: grid; grid-template-columns: 1fr auto; gap: 12px; margin-top: 26px; }
+.submit-btn { width: 100%; }
+.success-message {
+    display: none; background: #e9f6ec; color: #1e5631;
+    padding: 14px 16px; border-radius: 10px; margin-bottom: 20px;
+    border: 1px solid #b6ddc0; font-size: 14.5px;
+}
+.success-message.show { display: block; animation: rise .4s both; }
+
+.quick-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 44px; }
+
+/* ---------- Instagram strip ---------- */
+.ig-cta {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 22px; flex-wrap: wrap;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 26px 30px; margin-bottom: 34px;
+}
+.ig-cta .ig-left { display: flex; align-items: center; gap: 16px; }
+.ig-avatar {
+    width: 58px; height: 58px; border-radius: 50%;
+    display: grid; place-items: center; font-size: 25px; color: #fff;
+    background: linear-gradient(135deg, #a0622f, #c9a227, #1e5631);
+    flex-shrink: 0;
+}
+.ig-cta b { display: block; font-size: 17px; }
+.ig-cta span { font-size: 14px; color: var(--text-light); }
+
+/* ---------- Footer ---------- */
+footer {
+    background: linear-gradient(150deg, #123d22 0%, #1e5631 48%, #3d2a10 100%);
+    color: #fff; padding: 56px 20px 32px; position: relative;
+}
+footer::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--accent-2), var(--gold)); }
+.footer-grid {
+    max-width: 1200px; margin: 0 auto 34px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 32px;
+}
+.footer-grid h4 { font-family: var(--display); font-size: 18px; margin-bottom: 14px; }
+.footer-grid p, .footer-grid a { font-size: 14.5px; opacity: .88; color: #fff; text-decoration: none; display: block; margin-bottom: 8px; }
+.footer-grid a:hover { opacity: 1; text-decoration: underline; }
+.footer-logo { font-family: var(--display); font-size: 32px; letter-spacing: 8px; margin-bottom: 10px; }
+.footer-bottom {
+    max-width: 1200px; margin: 0 auto; padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, .18);
+    display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    font-size: 13px; opacity: .8;
+}
+
+/* ---------- Sections toggle ---------- */
+.section-content { display: none; }
+.section-content.active { display: block; animation: pageIn .5s cubic-bezier(.2,.7,.3,1) both; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+    .about-content { grid-template-columns: 1fr; gap: 34px; }
+    .nav-cta { display: none; }
+}
+@media (max-width: 860px) {
+    .nav-burger { display: block; }
+    .nav-links {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background: #fff;
+        padding: 12px;
+        border-bottom: 1px solid rgba(30, 86, 49, .14);
+        box-shadow: 0 16px 34px rgba(30, 86, 49, .14);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity .25s, transform .25s, visibility .25s;
+    }
+    .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+    .nav-links a { padding: 13px 16px; font-size: 16px; border-radius: 10px; }
+    .nav-links-phone { display: block; margin-top: 6px; }
+}
+
+@media (max-width: 768px) {
+    :root { --nav-h: 64px; }
+    .nav-container { gap: 10px; }
+    .logo { font-size: 24px; letter-spacing: 4px; }
+    .logo small { display: none; }
+    .section { padding: 60px 0; }
+    .booking-container { padding: 26px 20px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .form-actions { grid-template-columns: 1fr; }
+    .lunch-banner { padding: 26px 22px; }
+    .hero-branch { display: none; }
+    .gallery figure.wide { aspect-ratio: 16 / 10; }
+    .about-photos figure:first-child { grid-row: span 1; aspect-ratio: 3/4; }
+}
+@media (max-width: 480px) {
+    .hero { min-height: auto; padding: 56px 18px 64px; }
+    .gallery { gap: 10px; }
+    .btn { padding: 13px 24px; font-size: 14.5px; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="#home" class="logo" data-section="home">
+            <span class="leaf-mark">🌿</span>
+            <span>САД<small>МАХАЧКАЛА</small></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a data-section="home" class="nav-link active">Главная</a></li>
+            <li><a data-section="menu" class="nav-link">Меню</a></li>
+            <li><a data-section="about" class="nav-link">О нас</a></li>
+            <li><a data-section="gallery" class="nav-link">Фото</a></li>
+            <li><a data-section="booking" class="nav-link">Контакты</a></li>
+            <li class="nav-links-phone"><a href="tel:+79882920110">📞 +7 988 292-01-10</a></li>
+        </ul>
+        <a href="tel:+79882920110" class="nav-cta">📞 +7 988 292-01-10</a>
+        <button class="nav-burger" id="navBurger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+            <i></i><i></i><i></i>
+        </button>
+    </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section id="home" class="section-content active">
+
+    <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-tint"></div>
+        <div class="hero-vignette"></div>
+        <canvas id="leafCanvas" aria-hidden="true"></canvas>
+
+        <svg class="hero-branch left" viewBox="0 0 400 200" fill="none" aria-hidden="true">
+            <path d="M0 22 C90 30 180 52 300 96" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <path d="M70 28 C96 8 128 6 150 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M160 46 C186 24 220 22 244 34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <g fill="currentColor">
+                <ellipse cx="88" cy="18" rx="17" ry="8" transform="rotate(-22 88 18)"/>
+                <ellipse cx="132" cy="10" rx="15" ry="7" transform="rotate(-12 132 10)"/>
+                <ellipse cx="124" cy="44" rx="16" ry="7.5" transform="rotate(18 124 44)"/>
+                <ellipse cx="186" cy="34" rx="16" ry="7.5" transform="rotate(-26 186 34)"/>
+                <ellipse cx="232" cy="40" rx="14" ry="6.5" transform="rotate(-8 232 40)"/>
+                <ellipse cx="206" cy="66" rx="15" ry="7" transform="rotate(22 206 66)"/>
+                <ellipse cx="268" cy="78" rx="14" ry="6.5" transform="rotate(26 268 78)"/>
+                <ellipse cx="44" cy="30" rx="14" ry="6.5" transform="rotate(14 44 30)"/>
+            </g>
+        </svg>
+        <svg class="hero-branch right" viewBox="0 0 400 200" fill="none" aria-hidden="true">
+            <path d="M0 22 C90 30 180 52 300 96" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <path d="M70 28 C96 8 128 6 150 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <g fill="currentColor">
+                <ellipse cx="88" cy="18" rx="17" ry="8" transform="rotate(-22 88 18)"/>
+                <ellipse cx="132" cy="10" rx="15" ry="7" transform="rotate(-12 132 10)"/>
+                <ellipse cx="124" cy="44" rx="16" ry="7.5" transform="rotate(18 124 44)"/>
+                <ellipse cx="186" cy="34" rx="16" ry="7.5" transform="rotate(-26 186 34)"/>
+                <ellipse cx="240" cy="62" rx="15" ry="7" transform="rotate(20 240 62)"/>
+                <ellipse cx="44" cy="30" rx="14" ry="6.5" transform="rotate(14 44 30)"/>
+            </g>
+        </svg>
+
+        <div class="hero-inner">
+            <div class="hero-eyebrow">🌿 Ресторан с 2019 года · Махачкала</div>
+            <h1>САД</h1>
+            <p class="hero-sub">Цветущий сад в сердце города</p>
+            <p class="hero-lead">
+                Живые деревья прямо в зале, завтраки с девяти утра, хоспер и мангал,
+                кавказская классика рядом с азиатскими и европейскими блюдами.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" data-go="booking">Забронировать столик</button>
+                <button class="btn btn-ghost" data-go="menu">Посмотреть меню</button>
+            </div>
+            <div class="hero-facts">
+                <span class="hero-fact">🕘 Ежедневно 9:00 — 00:00</span>
+                <span class="hero-fact">📍 Ярагского, 45а</span>
+                <span class="hero-fact">⭐ 4.7 в 2ГИС</span>
+                <span class="hero-fact">💸 Средний чек ~1000 ₽</span>
+            </div>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+            <span>Листайте</span>
+            <span class="line"></span>
+        </div>
+    </div>
+
+    <!-- Преимущества -->
+    <div class="section white">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">Почему сюда возвращаются</span>
+                <h2 class="section-title">Не просто ресторан — атмосфера дачи в центре города</h2>
+                <p>Название «Сад» здесь буквальное: зелень и деревья растут прямо в зале, а летом открывается просторная веранда.</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature reveal">
+                    <div class="ico">🌳</div>
+                    <h3>Сад внутри зала</h3>
+                    <p>Живые растения, деревья над столами, мягкий свет люстр и удобные диваны — два этажа зелени и уюта.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="ico">🍳</div>
+                    <h3>Завтраки с 9:00</h3>
+                    <p>Панкейки, шакшука, скрэмбл с хумусом, зерновые тосты с красной икрой, асаи-боул и калмыцкий чай с выпечкой.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="ico">🔥</div>
+                    <h3>Хоспер и мангал</h3>
+                    <p>Кебаб из ягнёнка, лосось и дорадо на углях, рибай и томагавк, овощи гриль — вкус живого огня.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="ico">🎉</div>
+                    <h3>Банкеты до 200 гостей</h3>
+                    <p>Отдельный банкетный зал, кейтеринг, свадьбы и торжества под ключ. Есть молельная комната.</p>
+                </div>
+            </div>
+
+            <div class="stats" style="margin-top: 24px;">
+                <div class="stat reveal"><b>4.7</b><span>рейтинг в 2ГИС</span></div>
+                <div class="stat reveal"><b>~50K</b><span>подписчиков в Instagram</span></div>
+                <div class="stat reveal"><b>200</b><span>гостей на банкете</span></div>
+                <div class="stat reveal"><b>15ч</b><span>работаем каждый день</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Фирменные блюда -->
+    <div class="section light">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">Из нашего Instagram</span>
+                <h2 class="section-title">Блюда, за которыми приходят</h2>
+                <p>Кухня «Сада» — это кавказская классика, японские роллы и европейские блюда на одной странице меню.</p>
+            </div>
+
+            <div class="dish-grid">
+                <article class="dish reveal">
+                    <div class="dish-photo">
+                        <img src="sad-images/spinach-oladi.jpg" alt="Оладьи из шпината с красной икрой">
+                        <span class="dish-tag">Завтраки</span>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Оладьи из шпината</h3>
+                        <p>С красной икрой, гуакамоле из цукини, яйцом пашот и миксом салата.</p>
+                    </div>
+                </article>
+
+                <article class="dish reveal">
+                    <div class="dish-photo">
+                        <img src="sad-images/salmon-tartar.jpg" alt="Салат с лососем">
+                        <span class="dish-tag">Холодные закуски</span>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Лосось с яйцом и каперсами</h3>
+                        <p>Слабосолёный лосось, зелёный горошек, редис и микрозелень — лёгкая закуска к бокалу лимонада.</p>
+                    </div>
+                </article>
+
+                <article class="dish reveal">
+                    <div class="dish-photo">
+                        <img src="sad-images/hot-dish.jpg" alt="Горячее блюдо с картофельным пюре и грибным соусом">
+                        <span class="dish-tag">Горячее</span>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Котлета по-киевски</h3>
+                        <p>Хрустящая панировка, воздушное картофельное пюре и сливочный соус с шампиньонами.</p>
+                    </div>
+                </article>
+
+                <article class="dish reveal">
+                    <div class="dish-photo">
+                        <img src="sad-images/salad-winter.jpg" alt="Салат с зеленью и гренками">
+                        <span class="dish-tag">Салаты</span>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Микс салата с гренками</h3>
+                        <p>Свежая зелень, томаты черри, золотистые гренки и лёгкая заправка.</p>
+                    </div>
+                </article>
+
+                <article class="dish reveal">
+                    <div class="dish-photo">
+                        <img src="sad-images/nuts-jam.jpg" alt="Сухофрукты, орехи и варенье к чаю">
+                        <span class="dish-tag">К чаю</span>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Чайный сет</h3>
+                        <p>Домашнее варенье трёх видов, сухофрукты, орехи и урбеч — по-дагестански гостеприимно.</p>
+                    </div>
+                </article>
+
+                <article class="dish reveal">
+                    <div class="dish-photo">
+                        <img src="sad-images/summer-fruits.jpg" alt="Арбуз и фрукты на летней веранде">
+                        <span class="dish-tag">Веранда</span>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Летняя фруктовая тарелка</h3>
+                        <p>Арбуз, мандарины и сезонные фрукты — то, ради чего стоит занять место на веранде.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div style="text-align:center; margin-top: 40px;" class="reveal">
+                <button class="btn btn-green" data-go="menu">Открыть всё меню</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="section tight warm">
+        <div class="container">
+            <div class="lunch-banner reveal" style="margin-top:0;">
+                <div>
+                    <h3>Бизнес-ланч по будням</h3>
+                    <p>С 12:00 до 16:00 — комплексный обед по демократичной цене. Работаем каждый день с 9:00 до 00:00.</p>
+                </div>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <a href="tel:+79882920110" class="btn btn-primary">Позвонить</a>
+                    <button class="btn btn-ghost" data-go="booking">Забронировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section id="menu" class="section-content">
+    <div class="section white" style="padding-top: calc(var(--nav-h) + 60px);">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">Кухня</span>
+                <h2 class="section-title">Наше меню</h2>
+                <p>Кавказская, европейская и азиатская кухня, хоспер и мангал, авторские завтраки и десерты.</p>
+            </div>
+
+            <div class="menu-note reveal">
+                <span style="font-size:20px; line-height:1;">ℹ️</span>
+                <div>
+                    <strong>Меню сезонное.</strong> Здесь — актуальный состав блюд; цены указаны там, где они подтверждены официальным прайсом.
+                    Полный список с ценами уточняйте у официанта или по телефону <a href="tel:+79882920110" style="color:inherit;"><b>+7 988 292-01-10</b></a>.
+                    Средний чек — около 1000 ₽.
+                </div>
+            </div>
+
+            <div class="menu-grid">
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/spinach-oladi.jpg" alt="Завтраки в ресторане Сад">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🍳 Завтраки</h3>
+                        <div class="cat-sub">Каждый день с 9:00</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Оладьи из шпината<span class="desc">с красной икрой, гуакамоле из цукини и яйцом пашот</span></span></li>
+                            <li><span class="nm">Панкейки с ягодами</span></li>
+                            <li><span class="nm">Скрэмбл с хумусом</span></li>
+                            <li><span class="nm">Шакшука</span></li>
+                            <li><span class="nm">Зерновой тост с красной икрой</span></li>
+                            <li><span class="nm">Тост с лососем и авокадо</span></li>
+                            <li><span class="nm">Асаи-боул</span></li>
+                            <li><span class="nm">Овсяная каша</span></li>
+                            <li><span class="nm">Калмыцкий чай с выпечкой</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/hot-dish.jpg" alt="Хоспер и мангал">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🔥 Хоспер и мангал</h3>
+                        <div class="cat-sub">Готовим на живом огне</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Кебаб из ягнёнка</span><span class="dsh"></span><span class="pr">875 ₽</span></li>
+                            <li><span class="nm">Лосось на хоспере</span><span class="dsh"></span><span class="pr">1 655 ₽</span></li>
+                            <li><span class="nm">Дорадо</span><span class="dsh"></span><span class="pr">1 455 ₽</span></li>
+                            <li><span class="nm">Чикен стейк</span><span class="dsh"></span><span class="pr">755 ₽</span></li>
+                            <li><span class="nm">Крылышки</span><span class="dsh"></span><span class="pr">755 ₽</span></li>
+                            <li><span class="nm">Рибай</span></li>
+                            <li><span class="nm">Томагавк</span></li>
+                            <li><span class="nm">Грибной шашлык</span></li>
+                            <li><span class="nm">Овощи гриль</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/nuts-jam.jpg" alt="Кавказская кухня">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🏔️ Кавказская кухня</h3>
+                        <div class="cat-sub">Дагестанская классика</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Аварский хинкал</span></li>
+                            <li><span class="nm">Кумыкский хинкал</span></li>
+                            <li><span class="nm">Лакский хинкал</span></li>
+                            <li><span class="nm">Хачапури по-аджарски</span></li>
+                            <li><span class="nm">Кутабы</span></li>
+                            <li><span class="nm">Урбеч и домашнее варенье</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/salad-winter.jpg" alt="Салаты и супы">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🥗 Салаты и супы</h3>
+                        <div class="cat-sub">Лёгкое начало обеда</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Цезарь с курицей</span></li>
+                            <li><span class="nm">Греческий салат</span></li>
+                            <li><span class="nm">Лосось со свёклой</span></li>
+                            <li><span class="nm">Гуакамоле с крем-сыром</span></li>
+                            <li><span class="nm">Микс-салат с телятиной</span></li>
+                            <li><span class="nm">Том ям</span></li>
+                            <li><span class="nm">Крем-суп из тыквы с креветками</span></li>
+                            <li><span class="nm">Грибной крем-суп</span></li>
+                            <li><span class="nm">Бульон из лосося</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/salmon-tartar.jpg" alt="Роллы и азиатская кухня">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🍣 Роллы и Азия</h3>
+                        <div class="cat-sub">Японская кухня и паназия</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Филадельфия</span></li>
+                            <li><span class="nm">Калифорния</span></li>
+                            <li><span class="nm">Лосось с авокадо</span></li>
+                            <li><span class="nm">Угорь с трюфельным соусом</span></li>
+                            <li><span class="nm">Соба с курицей в зелёном карри</span></li>
+                            <li><span class="nm">Удон с телятиной</span></li>
+                            <li><span class="nm">Лапша с креветками в красном карри</span></li>
+                            <li><span class="nm">Темпура из креветок</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/banquet-table.jpg" alt="Горячие блюда">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🍽️ Горячие блюда</h3>
+                        <div class="cat-sub">Мясо, птица и рыба</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Медальоны из телятины с грибами</span></li>
+                            <li><span class="nm">Говядина в соусе из чёрного перца<span class="desc">с имбирным рисом</span></span></li>
+                            <li><span class="nm">Филе лосося с брокколи</span></li>
+                            <li><span class="nm">Дорадо с кремом из сельдерея</span></li>
+                            <li><span class="nm">Креветки в сливочном соусе с рисом</span></li>
+                            <li><span class="nm">Куриный стейк терияки<span class="desc">с гречневой лапшой</span></span></li>
+                            <li><span class="nm">Чёрные спагетти</span></li>
+                            <li><span class="nm">Спагетти с лососем</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/summer-fruits.jpg" alt="Десерты">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🍰 Десерты</h3>
+                        <div class="cat-sub">К кофе и к чаю</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Чизкейк Bali</span></li>
+                            <li><span class="nm">Чизкейк Coco</span></li>
+                            <li><span class="nm">Тирамису с дубайским шоколадом</span></li>
+                            <li><span class="nm">Фондан</span></li>
+                            <li><span class="nm">Шоколадное облако</span></li>
+                            <li><span class="nm">Венские вафли</span></li>
+                            <li><span class="nm">Панкейки с нутеллой и ягодами</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card reveal">
+                    <div class="menu-card-photo">
+                        <img src="sad-images/salad-winter.jpg" alt="Напитки">
+                    </div>
+                    <div class="menu-card-inner">
+                        <h3>🍹 Напитки</h3>
+                        <div class="cat-sub">Лимонады подаём графином</div>
+                        <ul class="menu-list">
+                            <li><span class="nm">Лимонад персик-клубника</span><span class="dsh"></span><span class="pr">825 ₽</span></li>
+                            <li><span class="nm">Лимонад ягодный</span><span class="dsh"></span><span class="pr">750 ₽</span></li>
+                            <li><span class="nm">Лимонад щавель-ананас</span><span class="dsh"></span><span class="pr">750 ₽</span></li>
+                            <li><span class="nm">Лимонад маракуйя-груша</span><span class="dsh"></span><span class="pr">750 ₽</span></li>
+                            <li><span class="nm">Бабл-ти манго</span><span class="dsh"></span><span class="pr">685 ₽</span></li>
+                            <li><span class="nm">Смузи (в ассортименте)</span><span class="dsh"></span><span class="pr">635 ₽</span></li>
+                            <li><span class="nm">Бамбл апельсиновый</span><span class="dsh"></span><span class="pr">595 ₽</span></li>
+                            <li><span class="nm">Раф урбеч</span><span class="dsh"></span><span class="pr">545 ₽</span></li>
+                            <li><span class="nm">Персиковый латте</span><span class="dsh"></span><span class="pr">495 ₽</span></li>
+                            <li><span class="nm">Краш цитрусовый</span><span class="dsh"></span><span class="pr">455 ₽</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lunch-banner reveal">
+                <div>
+                    <h3>🥘 Бизнес-ланч: будни, 12:00 — 16:00</h3>
+                    <p>Комплексный обед по демократичной цене. Работает только в будние дни.</p>
+                </div>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <button class="btn btn-ghost" data-go="booking">Забронировать столик</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section-content">
+    <div class="section light" style="padding-top: calc(var(--nav-h) + 60px);">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">О ресторане</span>
+                <h2 class="section-title">О ресторане САД</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h3>Атмосфера дачи в центре Махачкалы</h3>
+                    <p>
+                        «Сад» занимает два этажа на улице Магомеда Ярагского. Название здесь буквальное:
+                        зал заполнен живыми растениями, ветви деревьев нависают прямо над столами,
+                        а свет дают декоративные люстры на цепях. В тёплое время года открывается
+                        просторная летняя веранда.
+                    </p>
+                    <p>
+                        Кухня совмещает три направления — дагестанскую классику вроде аварского хинкала
+                        и кутабов, европейские стейки и пасту, японские роллы и паназию. Мясо и рыбу
+                        готовим на хоспере и мангале.
+                    </p>
+
+                    <div class="kitchen-chips">
+                        <span class="chip">Кавказская</span>
+                        <span class="chip">Европейская</span>
+                        <span class="chip">Японская</span>
+                        <span class="chip">Паназиатская</span>
+                        <span class="chip">Завтраки</span>
+                        <span class="chip">Хоспер и гриль</span>
+                    </div>
+
+                    <ul class="fact-list">
+                        <li><span class="fi">🕘</span><span><strong>Ежедневно с 9:00 до 00:00</strong></span></li>
+                        <li><span class="fi">📍</span><span>ул. Магомеда Ярагского, 45а (1–2 этаж), Ленинский район</span></li>
+                        <li><span class="fi">📞</span><span><a href="tel:+79882920110" style="color:inherit;">+7 988 292-01-10</a></span></li>
+                        <li><span class="fi">🍽️</span><span>Бизнес-ланч по будням с 12:00 до 16:00</span></li>
+                        <li><span class="fi">🎊</span><span>Банкеты и кейтеринг до 200 гостей</span></li>
+                        <li><span class="fi">🕌</span><span>Молельная комната на территории</span></li>
+                        <li><span class="fi">🌤️</span><span>Летняя веранда и посадка на улице</span></li>
+                        <li><span class="fi">📺</span><span>Спортивные трансляции</span></li>
+                        <li><span class="fi">🛵</span><span>Доставка и еда с собой</span></li>
+                    </ul>
+
+                    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;">
+                        <button class="btn btn-green" data-go="booking">Забронировать столик</button>
+                        <a class="btn btn-outline" href="https://www.instagram.com/cadrestaurant/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="about-photos reveal">
+                    <figure><img src="sad-images/banquet-table.jpg" alt="Сервировка банкетного стола в ресторане Сад"></figure>
+                    <figure><img src="sad-images/nuts-jam.jpg" alt="Варенье, орехи и сухофрукты к чаю"></figure>
+                    <figure><img src="sad-images/summer-fruits.jpg" alt="Фрукты на летней веранде"></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section white">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">Форматы</span>
+                <h2 class="section-title">Подойдёт для любого повода</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature reveal">
+                    <div class="ico">☕</div>
+                    <h3>Завтрак и работа</h3>
+                    <p>Открываемся в 9:00. Утренние блюда, кофе, рафы и смузи — можно спокойно поработать за столиком.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="ico">💼</div>
+                    <h3>Бизнес-ланч</h3>
+                    <p>По будням с 12:00 до 16:00 — комплексный обед недалеко от центра.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="ico">💐</div>
+                    <h3>Свадьбы и торжества</h3>
+                    <p>Банкетный зал до 200 гостей, кейтеринг и сервировка под ключ.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="ico">⚽</div>
+                    <h3>Матчи и компании</h3>
+                    <p>Спортивные трансляции, большие столы и веранда для шумных встреч с друзьями.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="section-content">
+    <div class="section white" style="padding-top: calc(var(--nav-h) + 60px);">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">Галерея</span>
+                <h2 class="section-title">Фото из нашего Instagram</h2>
+                <p>Блюда, интерьер и банкеты — кадры со страницы @cadrestaurant.</p>
+            </div>
+
+            <div class="ig-cta reveal">
+                <div class="ig-left">
+                    <div class="ig-avatar">🌿</div>
+                    <div>
+                        <b>@cadrestaurant</b>
+                        <span>Ресторан Сад · Махачкала · ~50 000 подписчиков</span>
+                    </div>
+                </div>
+                <a class="btn btn-green" href="https://www.instagram.com/cadrestaurant/" target="_blank" rel="noopener noreferrer">Открыть Instagram</a>
+            </div>
+
+            <div class="gallery reveal" id="galleryGrid">
+                <figure class="wide"><img src="sad-images/banquet-table.jpg" alt="Сервировка банкетного стола"><figcaption>Банкетная сервировка</figcaption></figure>
+                <figure><img src="sad-images/spinach-oladi.jpg" alt="Оладьи из шпината с красной икрой"><figcaption>Оладьи из шпината</figcaption></figure>
+                <figure><img src="sad-images/hot-dish.jpg" alt="Горячее с пюре и грибным соусом"><figcaption>Горячее с грибным соусом</figcaption></figure>
+                <figure><img src="sad-images/salmon-tartar.jpg" alt="Салат с лососем"><figcaption>Лосось с каперсами</figcaption></figure>
+                <figure><img src="sad-images/salad-winter.jpg" alt="Салат с гренками и коктейль"><figcaption>Салат и коктейль</figcaption></figure>
+                <figure><img src="sad-images/nuts-jam.jpg" alt="Варенье, орехи и сухофрукты"><figcaption>Чайный сет</figcaption></figure>
+                <figure><img src="sad-images/summer-fruits.jpg" alt="Арбуз и фрукты на веранде"><figcaption>Лето на веранде</figcaption></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= BOOKING / CONTACTS ================= -->
+<section id="booking" class="section-content">
+    <div class="section light" style="padding-top: calc(var(--nav-h) + 60px);">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="divider"></div>
+                <span class="eyebrow">Контакты</span>
+                <h2 class="section-title">Забронировать столик</h2>
+                <p>Позвоните, напишите в WhatsApp или оставьте заявку — перезвоним и подтвердим бронь.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <div class="icon">📍</div>
+                    <h3>Адрес</h3>
+                    <p>Махачкала, Ленинский район<br>1–2 этаж</p>
+                    <div class="contact-info">ул. М. Ярагского, 45а</div>
+                </div>
+                <div class="contact-card reveal">
+                    <div class="icon">📞</div>
+                    <h3>Телефон</h3>
+                    <p>Бронь, банкеты и доставка</p>
+                    <div class="contact-info"><a href="tel:+79882920110">+7 988 292-01-10</a></div>
+                </div>
+                <div class="contact-card reveal">
+                    <div class="icon">🕐</div>
+                    <h3>График работы</h3>
+                    <p>Ежедневно, без выходных</p>
+                    <div class="contact-info">9:00 — 00:00</div>
+                </div>
+            </div>
+
+            <div class="quick-actions reveal">
+                <a class="btn btn-green" href="tel:+79882920110">📞 Позвонить</a>
+                <a class="btn btn-outline" href="https://wa.me/79882920110" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+                <a class="btn btn-outline" href="https://www.instagram.com/cadrestaurant/" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+                <a class="btn btn-outline" href="https://maps.app.goo.gl/FGuBHBVd8NfKyut1A" target="_blank" rel="noopener noreferrer">🗺️ Как добраться</a>
+            </div>
+
+            <div class="map-wrap reveal">
+                <iframe
+                    title="Ресторан Сад на карте"
+                    src="https://maps.google.com/maps?q=%D0%9C%D0%B0%D1%85%D0%B0%D1%87%D0%BA%D0%B0%D0%BB%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%B0%D0%B3%D0%BE%D0%BC%D0%B5%D0%B4%D0%B0%20%D0%AF%D1%80%D0%B0%D0%B3%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2045%D0%B0&hl=ru&z=17&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="booking-container reveal">
+                <h3>Заявка на бронь</h3>
+                <p class="form-lead">Заполните форму — или отправьте те же данные одним сообщением в WhatsApp.</p>
+
+                <div class="success-message" id="successMessage">
+                    ✓ Спасибо! Заявка сформирована. Мы свяжемся с вами в ближайшее время — или позвоните сами:
+                    <a href="tel:+79882920110" style="color:inherit;"><b>+7 988 292-01-10</b></a>.
+                </div>
+
+                <form id="bookingForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 ___ ___ __ __" autocomplete="tel" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Дата *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Время *</label>
+                            <input type="time" id="time" name="time" min="09:00" max="23:30" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Количество гостей *</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Выберите...</option>
+                                <option value="1">1 человек</option>
+                                <option value="2">2 человека</option>
+                                <option value="3">3 человека</option>
+                                <option value="4">4 человека</option>
+                                <option value="5">5 человек</option>
+                                <option value="6">6 человек</option>
+                                <option value="7">7 человек</option>
+                                <option value="8+">8 и более</option>
+                                <option value="банкет">Банкет (от 20 гостей)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Комментарий</label>
+                        <textarea id="comments" name="comments" rows="3" placeholder="Например: день рождения, нужна веранда, детский стул..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-green submit-btn">Отправить заявку</button>
+                        <button type="button" class="btn btn-outline" id="waBtn">💬 В WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+    <button class="lb-close" id="lbClose" aria-label="Закрыть">✕</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Предыдущее фото">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-nav next" id="lbNext" aria-label="Следующее фото">›</button>
+    <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <div class="footer-logo">САД</div>
+            <p>Цветущий сад в сердце города.<br>Ресторан в Махачкале.</p>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <a href="tel:+79882920110">+7 988 292-01-10</a>
+            <a href="https://maps.app.goo.gl/FGuBHBVd8NfKyut1A" target="_blank" rel="noopener noreferrer">ул. М. Ярагского, 45а</a>
+            <p>Ежедневно 9:00 — 00:00</p>
+        </div>
+        <div>
+            <h4>Разделы</h4>
+            <a data-section="menu" style="cursor:pointer;">Меню</a>
+            <a data-section="about" style="cursor:pointer;">О нас</a>
+            <a data-section="gallery" style="cursor:pointer;">Фото</a>
+            <a data-section="booking" style="cursor:pointer;">Бронь столика</a>
+        </div>
+        <div>
+            <h4>Мы в сети</h4>
+            <a href="https://www.instagram.com/cadrestaurant/" target="_blank" rel="noopener noreferrer">Instagram @cadrestaurant</a>
+            <a href="https://wa.me/79882920110" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://makhachkala.edostav.ru/restorany/sad" target="_blank" rel="noopener noreferrer">Доставка</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Ресторан САД. Все права защищены.</span>
+        <span>Фотографии — из официального Instagram ресторана</span>
+    </div>
+</footer>
+
+<script>
+(function () {
+    'use strict';
+
+    var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ----- Если папка sad-images потерялась — показываем аккуратную заглушку ----- */
+    function markMissing(img) {
+        if (!img || img.tagName !== 'IMG') return;
+        if (!img.getAttribute('src')) return;          // пустой src (лайтбокс) — не трогаем
+        if (img.classList.contains('img-missing')) return;
+        img.classList.add('img-missing');
+        if (img.parentElement) img.parentElement.classList.add('img-holder--missing');
+    }
+    function clearMissing(img) {
+        if (!img || !img.classList || !img.classList.contains('img-missing')) return;
+        img.classList.remove('img-missing');
+        if (img.parentElement) img.parentElement.classList.remove('img-holder--missing');
+    }
+    document.addEventListener('error', function (e) { markMissing(e.target); }, true);
+    document.addEventListener('load', function (e) {
+        if (e.target && e.target.tagName === 'IMG' && e.target.naturalWidth > 0) clearMissing(e.target);
+    }, true);
+    window.addEventListener('load', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            if (img.complete && img.naturalWidth === 0) markMissing(img);
+        });
+    });
+
+    /* ---------------- Листопад (canvas) ---------------- */
+    (function leafFall() {
+        var canvas = document.getElementById('leafCanvas');
+        if (!canvas || !canvas.getContext) return;
+        var ctx = canvas.getContext('2d');
+
+        var COLORS = ['#9fc25a', '#7fa84a', '#5f8f3a', '#c9a227', '#d8b04a', '#b4762c', '#8c4a24', '#a86b2d'];
+        var leaves = [], w = 0, h = 0, raf = null, last = 0, visible = true, inView = true;
+
+        function resize() {
+            var dpr = Math.min(window.devicePixelRatio || 1, 2);
+            var r = canvas.getBoundingClientRect();
+            w = Math.max(1, r.width);
+            h = Math.max(1, r.height);
+            canvas.width = Math.round(w * dpr);
+            canvas.height = Math.round(h * dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            build();
+        }
+
+        function make(spread) {
+            var s = 7 + Math.random() * 15;
+            return {
+                x: Math.random() * w,
+                y: spread ? Math.random() * h : -30 - Math.random() * h * 0.5,
+                s: s,
+                vy: 16 + Math.random() * 34 + s,
+                drift: (Math.random() - 0.5) * 22,
+                sway: 14 + Math.random() * 40,
+                swaySpeed: 0.35 + Math.random() * 0.75,
+                phase: Math.random() * Math.PI * 2,
+                rot: Math.random() * Math.PI * 2,
+                vrot: (Math.random() - 0.5) * 1.5,
+                flip: 0.5 + Math.random() * 0.9,
+                color: COLORS[(Math.random() * COLORS.length) | 0],
+                alpha: 0.45 + Math.random() * 0.45
+            };
+        }
+
+        function build() {
+            var n = Math.round(Math.min(48, Math.max(14, w / 26)));
+            leaves = [];
+            for (var i = 0; i < n; i++) leaves.push(make(true));
+        }
+
+        function leafPath(s) {
+            ctx.beginPath();
+            ctx.moveTo(0, -s);
+            ctx.bezierCurveTo(s * 0.78, -s * 0.55, s * 0.62, s * 0.58, 0, s);
+            ctx.bezierCurveTo(-s * 0.62, s * 0.58, -s * 0.78, -s * 0.55, 0, -s);
+            ctx.closePath();
+        }
+
+        function paint(dt) {
+            ctx.clearRect(0, 0, w, h);
+            for (var i = 0; i < leaves.length; i++) {
+                var l = leaves[i];
+                if (dt) {
+                    l.y += l.vy * dt;
+                    l.x += l.drift * dt;
+                    l.phase += l.swaySpeed * dt;
+                    l.rot += l.vrot * dt;
+                    if (l.y - l.s > h + 20) { leaves[i] = make(false); continue; }
+                    if (l.x < -80) l.x = w + 60;
+                    if (l.x > w + 80) l.x = -60;
+                }
+                var x = l.x + Math.sin(l.phase) * l.sway;
+                var sx = 0.3 + Math.abs(Math.cos(l.phase * l.flip)) * 0.7;
+
+                ctx.save();
+                ctx.translate(x, l.y);
+                ctx.rotate(l.rot);
+                ctx.scale(sx, 1);
+                ctx.globalAlpha = l.alpha;
+                ctx.fillStyle = l.color;
+                leafPath(l.s);
+                ctx.fill();
+                ctx.globalAlpha = l.alpha * 0.4;
+                ctx.strokeStyle = 'rgba(30,45,20,.75)';
+                ctx.lineWidth = Math.max(0.6, l.s * 0.075);
+                ctx.beginPath();
+                ctx.moveTo(0, -l.s * 0.82);
+                ctx.lineTo(0, l.s * 0.9);
+                ctx.stroke();
+                ctx.restore();
+            }
+        }
+
+        function frame(t) {
+            raf = null;
+            var dt = last ? Math.min((t - last) / 1000, 0.05) : 0.016;
+            last = t;
+            paint(dt);
+            schedule();
+        }
+
+        function schedule() {
+            if (raf || REDUCED || !visible || !inView) return;
+            raf = window.requestAnimationFrame(frame);
+        }
+
+        function stop() {
+            if (raf) { window.cancelAnimationFrame(raf); raf = null; }
+            last = 0;
+        }
+
+        window.addEventListener('resize', function () {
+            resize();
+            if (REDUCED || !visible || !inView) paint(0); else schedule();
+        }, { passive: true });
+
+        document.addEventListener('visibilitychange', function () {
+            visible = !document.hidden;
+            if (visible) schedule(); else stop();
+        });
+
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (entries) {
+                inView = entries[0].isIntersecting;
+                if (inView) schedule(); else stop();
+            }, { threshold: 0 }).observe(canvas);
+        }
+
+        resize();
+        if (REDUCED) paint(0); else schedule();
+    })();
+
+    /* ---------------- Навигация по секциям ---------------- */
+    var SECTIONS = ['home', 'menu', 'about', 'gallery', 'booking'];
+
+    function showSection(id, push) {
+        if (SECTIONS.indexOf(id) === -1) id = 'home';
+
+        document.querySelectorAll('.section-content').forEach(function (s) {
+            s.classList.toggle('active', s.id === id);
+        });
+        document.querySelectorAll('.nav-link').forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('data-section') === id);
+        });
+
+        window.scrollTo({ top: 0, behavior: REDUCED ? 'auto' : 'smooth' });
+
+        if (push !== false && window.history && history.replaceState) {
+            history.replaceState(null, '', '#' + id);
+        }
+        initReveal();
+    }
+
+    document.addEventListener('click', function (e) {
+        var target = e.target.closest('[data-section], [data-go]');
+        if (!target) return;
+        var id = target.getAttribute('data-section') || target.getAttribute('data-go');
+        if (!id) return;
+        e.preventDefault();
+        showSection(id);
+    });
+
+    window.addEventListener('hashchange', function () {
+        showSection((location.hash || '#home').slice(1), false);
+    });
+
+    /* ---------------- Мобильное меню ---------------- */
+    var burger = document.getElementById('navBurger');
+    var navLinks = document.getElementById('navLinks');
+
+    function setMenu(open) {
+        if (!burger || !navLinks) return;
+        navLinks.classList.toggle('open', open);
+        burger.classList.toggle('open', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    }
+
+    if (burger) {
+        burger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            setMenu(!navLinks.classList.contains('open'));
+        });
+        navLinks.addEventListener('click', function (e) {
+            if (e.target.closest('a')) setMenu(false);
+        });
+        document.addEventListener('click', function (e) {
+            if (!navLinks.classList.contains('open')) return;
+            if (!e.target.closest('#navLinks') && !e.target.closest('#navBurger')) setMenu(false);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') setMenu(false);
+        });
+    }
+
+    /* ---------------- Тень навбара ---------------- */
+    var nav = document.getElementById('mainNav');
+    function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 12); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------------- Появление блоков ---------------- */
+    var io = null;
+    if ('IntersectionObserver' in window && !REDUCED) {
+        io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }
+
+    function initReveal() {
+        var nodes = document.querySelectorAll('.section-content.active .reveal:not(.in)');
+        if (!io) { nodes.forEach(function (n) { n.classList.add('in'); }); return; }
+        var i = 0;
+        nodes.forEach(function (n) {
+            n.style.transitionDelay = Math.min(i * 55, 330) + 'ms';
+            io.observe(n);
+            i++;
+        });
+    }
+
+    /* ---------------- Лайтбокс галереи ---------------- */
+    (function lightbox() {
+        var grid = document.getElementById('galleryGrid');
+        var box = document.getElementById('lightbox');
+        if (!grid || !box) return;
+        var img = document.getElementById('lbImg');
+        var cap = document.getElementById('lbCap');
+        var figures = Array.prototype.slice.call(grid.querySelectorAll('figure'));
+        var idx = 0;
+
+        function open(i) {
+            idx = (i + figures.length) % figures.length;
+            var f = figures[idx];
+            var src = f.querySelector('img');
+            var c = f.querySelector('figcaption');
+            img.src = src.getAttribute('src');
+            img.alt = src.getAttribute('alt') || '';
+            cap.textContent = c ? c.textContent : '';
+            box.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function close() {
+            box.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        figures.forEach(function (f, i) {
+            f.addEventListener('click', function () { open(i); });
+        });
+        document.getElementById('lbClose').addEventListener('click', close);
+        document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); open(idx - 1); });
+        document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); open(idx + 1); });
+        box.addEventListener('click', function (e) { if (e.target === box || e.target === img) close(); });
+        document.addEventListener('keydown', function (e) {
+            if (!box.classList.contains('open')) return;
+            if (e.key === 'Escape') close();
+            if (e.key === 'ArrowLeft') open(idx - 1);
+            if (e.key === 'ArrowRight') open(idx + 1);
+        });
+    })();
+
+    /* ---------------- Форма брони ---------------- */
+    var form = document.getElementById('bookingForm');
+    var dateInput = document.getElementById('date');
+
+    if (dateInput) {
+        var d = new Date();
+        dateInput.min = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    }
+
+    function collect() {
+        var get = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+        return {
+            name: get('name'), phone: get('phone'), date: get('date'),
+            time: get('time'), guests: get('guests'), email: get('email'), comments: get('comments')
+        };
+    }
+
+    function validate(d) {
+        if (!d.name || !d.phone || !d.date || !d.time || !d.guests) {
+            alert('Пожалуйста, заполните имя, телефон, дату, время и количество гостей.');
+            return false;
+        }
+        if (d.phone.replace(/\D/g, '').length < 10) {
+            alert('Проверьте, пожалуйста, номер телефона.');
+            return false;
+        }
+        return true;
+    }
+
+    function asText(d) {
+        var lines = [
+            'Здравствуйте! Хочу забронировать столик в ресторане «Сад».',
+            'Имя: ' + d.name,
+            'Телефон: ' + d.phone,
+            'Дата: ' + d.date,
+            'Время: ' + d.time,
+            'Гостей: ' + d.guests
+        ];
+        if (d.email) lines.push('Email: ' + d.email);
+        if (d.comments) lines.push('Комментарий: ' + d.comments);
+        return lines.join('\n');
+    }
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var data = collect();
+            if (!validate(data)) return;
+
+            var msg = document.getElementById('successMessage');
+            msg.classList.add('show');
+            msg.scrollIntoView({ block: 'center', behavior: REDUCED ? 'auto' : 'smooth' });
+            form.reset();
+            setTimeout(function () { msg.classList.remove('show'); }, 9000);
+
+            // Здесь подключается отправка на сервер / в CRM / в Telegram-бот.
+            console.log('Бронь:', data);
+        });
+    }
+
+    var waBtn = document.getElementById('waBtn');
+    if (waBtn) {
+        waBtn.addEventListener('click', function () {
+            var data = collect();
+            if (!validate(data)) return;
+            window.open('https://wa.me/79882920110?text=' + encodeURIComponent(asText(data)), '_blank', 'noopener');
+        });
+    }
+
+    /* ---------------- Старт ---------------- */
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    showSection((location.hash || '#home').slice(1), false);
+})();
+</script>
+</body>
+</html>
